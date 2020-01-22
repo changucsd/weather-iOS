@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +12,47 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Kh6-vG-WXD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poweredby-oneline" translatesAutoresizingMaskIntoConstraints="NO" id="7mk-Zt-dtt">
+                                <rect key="frame" x="-3143" y="762" width="6700" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="yAU-c4-skK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="KVF-2Z-xKM">
+                                <rect key="frame" x="117" y="236" width="180" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="b0m-qs-RpT"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KVF-2Z-xKM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0B7-5y-4qH"/>
+                            <constraint firstItem="Kh6-vG-WXD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1rr-Yn-ug4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7mk-Zt-dtt" secondAttribute="bottom" constant="28" id="OIu-UF-rgj"/>
+                            <constraint firstItem="Kh6-vG-WXD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yox-xt-rns"/>
+                            <constraint firstItem="KVF-2Z-xKM" firstAttribute="centerX" secondItem="Kh6-vG-WXD" secondAttribute="centerX" id="Ytw-uS-xaN"/>
+                            <constraint firstItem="KVF-2Z-xKM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="192" id="of2-dT-qMy"/>
+                            <constraint firstItem="Kh6-vG-WXD" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="plV-px-ONi"/>
+                            <constraint firstItem="7mk-Zt-dtt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ylm-zC-5sU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="4201" height="6302"/>
+        <image name="poweredby-oneline" width="3350" height="759"/>
+        <image name="weather-cloudy" width="90" height="90"/>
+    </resources>
 </document>

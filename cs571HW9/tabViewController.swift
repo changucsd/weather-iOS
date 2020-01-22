@@ -7,12 +7,34 @@
 //
 
 import UIKit
+import SwiftyJSON
 
-class tabViewController: UIViewController {
 
+class tabViewController: UITabBarController {
+    
+    var weatherJson: JSON! // for today and weekly
+    var searchLocation: String! // for phote view
+    
+    var weatherPassed: JSON!{
+           didSet {
+               weatherJson = weatherPassed
+           }
+    }
+    
+    var locPassed: String!{
+           didSet {
+               searchLocation = locPassed
+           }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        var currentJson = weatherJson["currently"]
+        
+//        print(weatherJson["currently"])
         // Do any additional setup after loading the view.
     }
     
